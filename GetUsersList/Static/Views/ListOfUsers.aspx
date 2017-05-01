@@ -27,7 +27,7 @@
             // var person = '{Name: "' + $("#txtName").val() + '" }';
             $.ajax({
                 type: "GET",
-                url: "http://192.168.20.205:81/Alchemy/Plugins/DownloadCMSReport/api/Service/GetPublicationList",
+                url: "http://localhost:81/Alchemy/Plugins/DownloadCMSReport/api/Service/GetPublicationList",
                 // data: person,
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -76,7 +76,7 @@
                 var person = '{Name: "' + $("#txtName").val() + '" }';
                 $.ajax({
                     type: "GET",
-                    url: "http://192.168.20.205:81/Alchemy/Plugins/DownloadCMSReport/api/Service/GetUserListData",
+                    url: "http://localhost:81/Alchemy/Plugins/DownloadCMSReport/api/Service/GetUserListData",
                     data: person,
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
@@ -98,7 +98,7 @@
                 var person = '{Name: "' + $("#txtName").val() + '" }';
                 $.ajax({
                     type: "GET",
-                    url: "http://192.168.20.205:81/Alchemy/Plugins/DownloadCMSReport/api/Service/GetPublicationList",
+                    url: "http://localhost:81/Alchemy/Plugins/DownloadCMSReport/api/Service/GetPublicationList",
                     data: person,
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
@@ -127,7 +127,7 @@
                 var pubId = '{pubId: "' + $("#ddlPubList").val() + '",itemType: "' + $("#itemTypes").val() + '"}';
                 $.ajax({
                     type: "POST",
-                    url: "http://192.168.20.205:81/Alchemy/Plugins/DownloadCMSReport/api/Service/AjaxGetComponent",
+                    url: "http://localhost:81/Alchemy/Plugins/DownloadCMSReport/api/Service/AjaxGetComponent",
                     data: pubId,
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
