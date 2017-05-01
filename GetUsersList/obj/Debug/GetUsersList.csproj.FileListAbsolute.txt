@@ -1,0 +1,13 @@
+D:\Alchemy\GetUsersList\GetUsersList\bin\Debug\GetUsersList.dll
+D:\Alchemy\GetUsersList\GetUsersList\bin\Debug\GetUsersList.pdb
+D:\Alchemy\GetUsersList\GetUsersList\bin\Debug\Alchemy4Tridion.Plugins.dll
+D:\Alchemy\GetUsersList\GetUsersList\bin\Debug\Newtonsoft.Json.dll
+D:\Alchemy\GetUsersList\GetUsersList\bin\Debug\System.Net.Http.Formatting.dll
+D:\Alchemy\GetUsersList\GetUsersList\bin\Debug\System.Web.Http.dll
+D:\Alchemy\GetUsersList\GetUsersList\bin\Debug\Tridion.ContentManager.CoreService.Client.dll
+D:\Alchemy\GetUsersList\GetUsersList\bin\Debug\Alchemy4Tridion.Plugins.xml
+D:\Alchemy\GetUsersList\GetUsersList\bin\Debug\Newtonsoft.Json.xml
+D:\Alchemy\GetUsersList\GetUsersList\bin\Debug\System.Net.Http.Formatting.xml
+D:\Alchemy\GetUsersList\GetUsersList\bin\Debug\System.Web.Http.xml
+D:\Alchemy\GetUsersList\GetUsersList\obj\Debug\GetUsersList.dll
+D:\Alchemy\GetUsersList\GetUsersList\obj\Debug\GetUsersList.pdb
