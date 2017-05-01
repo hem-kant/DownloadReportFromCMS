@@ -23,11 +23,36 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("ajax-response");
+            tr = table.getElementsByTagName("tr");
+            for (i = 1; i < tr.length; i++) {
+                tds = tr[i].getElementsByTagName("td");
+                var isDisplay = false;
+                for (var j = 0; j < tds.length; j++) {
+                    
+                    if (tds[j]) {
+                        if (tds[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            isDisplay = true;
+                        }
+                    }
+                }
+
+                if (isDisplay==true) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
         $(document).ready(function () {
             // var person = '{Name: "' + $("#txtName").val() + '" }';
             $.ajax({
                 type: "GET",
-                url: "http://localhost:81/Alchemy/Plugins/DownloadCMSReport/api/Service/GetPublicationList",
+                url: "http://192.168.20.205:81/Alchemy/Plugins/DownloadCMSReport/api/Service/GetPublicationList",
                 // data: person,
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -76,7 +101,7 @@
                 var person = '{Name: "' + $("#txtName").val() + '" }';
                 $.ajax({
                     type: "GET",
-                    url: "http://localhost:81/Alchemy/Plugins/DownloadCMSReport/api/Service/GetUserListData",
+                    url: "http://192.168.20.205:81/Alchemy/Plugins/DownloadCMSReport/api/Service/GetUserListData",
                     data: person,
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
@@ -98,7 +123,7 @@
                 var person = '{Name: "' + $("#txtName").val() + '" }';
                 $.ajax({
                     type: "GET",
-                    url: "http://localhost:81/Alchemy/Plugins/DownloadCMSReport/api/Service/GetPublicationList",
+                    url: "http://192.168.20.205:81/Alchemy/Plugins/DownloadCMSReport/api/Service/GetPublicationList",
                     data: person,
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
@@ -127,7 +152,7 @@
                 var pubId = '{pubId: "' + $("#ddlPubList").val() + '",itemType: "' + $("#itemTypes").val() + '"}';
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost:81/Alchemy/Plugins/DownloadCMSReport/api/Service/AjaxGetComponent",
+                    url: "http://192.168.20.205:81/Alchemy/Plugins/DownloadCMSReport/api/Service/AjaxGetComponent",
                     data: pubId,
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
@@ -162,6 +187,13 @@
             <div class="form-group row">
                 <h1>Download CMS Report</h1>
             </div>
+          
+            <div class="form-group row">
+                <label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Search</label>
+                <div class="col-sm-10">
+                 <input type="text" class="col-sm-2 col-form-label col-form-label-lg" id="myInput" onkeyup="myFunction()" placeholder="Search.." title="Type in a name">
+                </div>
+            </div>
             <div class="form-group row">
                 <label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Publication Id</label>
                 <div class="col-sm-10">
@@ -192,7 +224,7 @@
                     </div>
                 </div>
             </div>
-<%--            <div class="row">
+            <%--            <div class="row">
                 <div class='col-sm-6'>
                     <div class="form-group">
                         <div class='input-group date' id='datetimepicker1'>
@@ -231,8 +263,6 @@
                         </tr>
                     </thead>
                     <tbody id="table-responsive-tr">
-                        
-                        
                     </tbody>
                 </table>
             </div>
